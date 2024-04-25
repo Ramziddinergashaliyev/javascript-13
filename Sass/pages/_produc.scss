@@ -1,0 +1,28 @@
+.product__card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 40px;
+  margin-top: 60px;
+}
+
+img {
+  width: 80%;
+}
+
+.product__desc {
+  font-size: 18px;
+}
+@media (max-width: 900px) {
+  .product__card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .product__desc {
+    font-size: 12px;
+  }
+}

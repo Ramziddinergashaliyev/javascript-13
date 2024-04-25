@@ -1,0 +1,56 @@
+.form__information {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form__galery {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
+
+.form__btns {
+  display: flex;
+  gap: 20px;
+}
+
+.change__btn {
+  background-color: rgb(18, 231, 29);
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.remove__btn {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.form__bottom {
+  width: 50%;
+  &__card {
+    width: 100%;
+  }
+}
+
+h3 {
+  padding: 10px 20px;
+}
+.save__btn {
+  padding: 10px 30px;
+  background-color: rgb(18, 231, 29);
+  color: white;
+  border-radius: 5px;
+  margin: 10px 20px;
+}
