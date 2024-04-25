@@ -97,8 +97,9 @@ main {
   left: 0;
   z-index: 999;
   width: 100%;
-  background: #ffffff;
+  background: beige;
   color: #394149;
+  border-bottom: 1px solid gray;
 }
 .header .header__navbar {
   justify-content: space-between;
@@ -197,6 +198,10 @@ main {
     width: 80%;
   }
 }
+body {
+  background-color: beige;
+}
+
 .products__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -212,6 +217,7 @@ main {
   box-shadow: 1px 1px 10px gray;
   border-radius: 10px;
   overflow: hidden;
+  background-color: white;
 }
 .products__card__info {
   padding: 20px;
@@ -295,6 +301,7 @@ input {
   padding: 10px;
   color: white;
   border-radius: 5px;
+  width: 100%;
 }
 
 .form__card__bottom {

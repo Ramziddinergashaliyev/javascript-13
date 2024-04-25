@@ -1,3 +1,7 @@
+body {
+  background-color: beige;
+}
+
 .products {
   &__cards {
     display: grid;
@@ -17,6 +21,7 @@
     box-shadow: 1px 1px 10px gray;
     border-radius: 10px;
     overflow: hidden;
+    background-color: white;
   }
 
   &__card__info {

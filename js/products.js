@@ -5,6 +5,7 @@ const productsCards = document.querySelector(".products__cards");
 const seeMoreBtn = document.querySelector(".seeMoreBtn");
 const form = document.querySelector(".form");
 const products = document.querySelector(".products");
+const formBtndelete = document.querySelector(".formBtndelete");
 
 const username = document.querySelector(".username");
 const password = document.querySelector(".password");
@@ -94,9 +95,9 @@ const logbtn = document.querySelector(".loginBtn");
 function chekAdmin() {
   let isLogin = localStorage.getItem("x-auth-token");
   if (isLogin) {
-    logbtn.innerHTML = "Login In";
+    logbtn.innerHTML = "Login Out";
   } else {
-    logbtn.innerHTML = "login Out";
+    logbtn.innerHTML = "login In";
   }
 }
 
