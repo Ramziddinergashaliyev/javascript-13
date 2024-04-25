@@ -10,7 +10,7 @@ const formBtndelete = document.querySelector(".formBtndelete");
 const username = document.querySelector(".username");
 const password = document.querySelector(".password");
 
-let limitProducs = 4;
+let limitProducs = 8;
 let count = 1;
 
 form.addEventListener("submit", (e) => {
@@ -47,6 +47,7 @@ async function apiProduct(url) {
     .then((res) => mapProductData(res))
     .catch((err) => console.log(err))
     .finally(() => {
+      loading.style.display = "none";
       seeMoreBtn.innerHTML = "See more";
       seeMoreBtn.removeAttribute("disabled", true);
     });
@@ -71,6 +72,29 @@ function mapProductData(product) {
   });
   productsCards.innerHTML = productsCard;
 }
+
+const loading = document.querySelector(".loading");
+
+function loadCard(count) {
+  let loadingCards = "";
+  for (let i = 0; i < count; i++) {
+    loadingCards += `
+          <div class="loading__card">
+            <div class="loading__card__img bg__animation"></div>
+            <div class="loading__card__info bg__animation">
+              <h1 class="loading__card__desc bg__animation"></h1>
+              <p class="loading__card__desc bg__animation"></p>
+              <p class="loading__card__desc bg__animation"></p>
+              <p class="loading__card__desc bg__animation"></p>
+              <p class="loading__card__desc bg__animation"></p>
+            </div>
+          </div>
+    `;
+  }
+  loading.innerHTML = loadingCards;
+}
+
+loadCard(limitProducs);
 
 seeMoreBtn.addEventListener("click", () => {
   count++;

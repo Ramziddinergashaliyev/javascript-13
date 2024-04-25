@@ -202,6 +202,9 @@ body {
   background-color: beige;
 }
 
+.products {
+  padding-top: 50px;
+}
 .products__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -376,7 +379,7 @@ h3 {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   grid-gap: 40px;
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 img {
@@ -397,5 +400,36 @@ img {
 @media (max-width: 600px) {
   .product__desc {
     font-size: 12px;
+  }
+}
+.loading {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+.loading__card {
+  box-shadow: 1px 1px 10px gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.loading__card__info {
+  padding: 20px;
+  height: 100px;
+}
+.loading__card__img {
+  width: 100%;
+  height: 200px;
+}
+.loading .bg__animation {
+  background: linear-gradient(90deg, #eee, #ddd, #eee);
+  background-size: 200%;
+  animation: bgMove 1s linear 0s infinite;
+}
+@keyframes bgMove {
+  to {
+    background-position: 200%;
   }
 }

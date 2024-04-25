@@ -3,6 +3,7 @@ body {
 }
 
 .products {
+  padding-top: 50px;
   &__cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
